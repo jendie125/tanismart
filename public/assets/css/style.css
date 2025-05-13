@@ -1,0 +1,280 @@
+/* Umum */
+body {
+  font-family: "Poppins", sans-serif;
+  color: #333;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Content container and sections */
+.content-container {
+  width: 100%;
+  position: relative;
+}
+
+.content-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: none;
+  overflow: auto;
+  padding-top: 76px; /* Height of navbar */
+  padding-bottom: 70px; /* Space for footer */
+}
+
+/* Section header with proper spacing */
+.section-header {
+  padding-top: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1a2a3a !important;
+  z-index: 1000;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand span {
+  color: #3cb371;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover, 
+.navbar .nav-link.active {
+  color: #3cb371 !important;
+  font-weight: 700;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("../img/bg.jpg") no-repeat center center;
+  background-size: cover;
+  height: calc(100vh - 76px - 70px); /* Viewport height minus navbar and footer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero h1 span {
+  color: #3CB371;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn-primary {
+  background-color: #3cb371;
+  border-color: #3cb371;
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.hero .btn-primary:hover {
+  background-color: #58c256;
+  border-color: #58c256;
+}
+
+/* Section Titles - Making all section titles the same color */
+.section-title {
+  position: relative;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-align: center;
+  color: #3CB371; /* Consistent green color for all section titles */
+}
+
+.section-title::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: #3cb371;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* About Section */
+#about-content img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#about-content h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+#about-content p {
+  text-align: justify !important;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Card Style (Artikel, Produk, dsb) */
+.card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #777;
+  margin-bottom: 1rem;
+}
+
+.btn-primary {
+  background-color: #3cb371;
+  border-color: #3cb371;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #58c256;
+  border-color: #58c256;
+}
+
+/* Team Section */
+.team-card {
+  transition: all 0.3s ease-in-out;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.img-container {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.img-container img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* Scrollable sections */
+.scrollable-section {
+  overflow-y: auto;
+}
+
+/* Footer - Consistent with navbar */
+.section-footer {
+  background-color: #1a2a3a; /* Same as navbar */
+  padding: 20px 0;
+  color: white;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.section-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.section-footer a {
+  color: #3cb371;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.section-footer a:hover {
+  color: #fff;
+}
+
+.section-footer .bi {
+  font-size: 1.5rem;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+  
+  .hero p {
+    font-size: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+  
+  .card-title {
+    font-size: 1.1rem;
+  }
+  
+  .content-section {
+    height: auto;
+    min-height: 100vh;
+  }
+  
+  /* Adjust padding for mobile view */
+  .content-section {
+    padding-top: 76px;
+  }
+  
+  .section-header {
+    padding-top: 15px;
+  }
+}
